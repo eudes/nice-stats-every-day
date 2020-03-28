@@ -31,7 +31,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new HtmlWebpackPlugin({ filename: 'index.html', template: 'app.html'}),
+    new HtmlWebpackPlugin({ filename: 'index.html', template: 'index.html'}),
   ],
   devServer: {
     port : process.env.WEBPACK_PORT,
