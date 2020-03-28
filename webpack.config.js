@@ -4,9 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, "./app"),
-  entry: './app.js',
+  entry: {
+    app: './app.js',
+    "service-worker": './service-worker.js',
+  },
   output: {
-    filename: './assets/bundle.js',
+    filename: './[name].js',
     path: path.resolve(__dirname, './public')
   },
   module: {
@@ -31,7 +34,10 @@ module.exports = {
     }]
   },
   plugins: [
-    new HtmlWebpackPlugin({ filename: 'index.html', template: 'index.html'}),
+    new HtmlWebpackPlugin({
+      filename: 'index.html', template: 'index.html',
+      excludeChunks: [ 'service-worker' ]
+    }),
   ],
   devServer: {
     port : process.env.WEBPACK_PORT,
