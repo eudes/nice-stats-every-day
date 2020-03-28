@@ -12,7 +12,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static('app'));
+app.use(express.static('public'));
 
 const port = process.env.PORT;
 const subscriptionsTable = process.env.SUBSCRIPTIONS_TABLE;

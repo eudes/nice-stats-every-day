@@ -105,4 +105,5 @@ dist
 
 .idea
 private_key
-server/.env
+.env
+public/
