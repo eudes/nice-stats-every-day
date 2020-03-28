@@ -37,7 +37,7 @@ module.exports = {
     port : process.env.WEBPACK_PORT,
     contentBase: path.resolve(__dirname, './public'),
     proxy : {
-      "/": { target: `http://localhost:${process.env.NODE_PORT}` }
+      "/": { target: `http://localhost:${process.env.PORT}` }
     }
   }
 };

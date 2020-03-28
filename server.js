@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static('app'));
 
-const port = process.env.NODE_PORT;
+const port = process.env.PORT;
 const subscriptionsTable = process.env.SUBSCRIPTIONS_TABLE;
 const apiKey = process.env.FIREBASE_API_KEY;
 
